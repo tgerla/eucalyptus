@@ -44,7 +44,7 @@ eucalyptus-cloud: eucalyptus-opts.h $(OBJS)
 
 eucalyptus-opts.c: eucalyptus-opts.h
 
-eucalyptus-opts.h:
+eucalyptus-opts.h: arguments.ggo
 	gengetopt --input=arguments.ggo --file-name=eucalyptus-opts --func-name=arguments --arg-struct-name=eucalyptus_opts
 
 install: eucalyptus-cloud

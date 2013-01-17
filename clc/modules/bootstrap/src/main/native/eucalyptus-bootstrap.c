@@ -822,6 +822,9 @@ int java_init(euca_opts *args, java_home_t *data) {
 		JVM_ARG(opt[++x], "-Xbootclasspath/a:%1$s/bin/agent.jar", GETARG(args,
 				profiler_home));
 	}
+	if (args->javaagent_given) {
+		JVM_ARG(opt[++x], "-javaagent:%s", GETARG(args, javaagent));
+	}
 	if (args->user_given) {
 		JVM_ARG(opt[++x], "-Deuca.user=%s", GETARG(args, user));
 	}

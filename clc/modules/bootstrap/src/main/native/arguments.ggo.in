@@ -60,4 +60,5 @@ option "debug-suspend"         -   "Force debugger to wait at main()."          
 option "profile"               -   "Launch with jprofiler enabled."                    flag                              off                            hidden
 option "profiler-home"         -   "Set the home for jprofiler."                       string  typestr="DIRECTORY"       default="/opt/profile"  no     dependon="profile" hidden
 option "agentlib"              -   "Launch with agentlib enabled."                     string  typestr="AGENTLIB"                              optional dependon="profile" hidden
+option "javaagent"		-	"Launch with javaagent parameter."		string	typestr="JAVAAGENT"				optional	hidden
 
